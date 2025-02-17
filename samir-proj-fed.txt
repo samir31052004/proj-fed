@@ -1,0 +1,68 @@
+Projet : Plateforme Intelligente de Commande en Gros avec Gestion de Livraison Intégrée
+
+Objectif Principal
+Développer une solution B2B unifiée connectant fournisseurs, clients professionnels et livreurs via une interface ergonomique, en intégrant des outils d'IA et d'analyse prédictive pour optimiser la gestion des commandes, des stocks et des livraisons.
+
+Modules Clés & Fonctionnalités Stratégiques
+
+A. Espace Fournisseurs
+
+Profil d'entreprise optimisé
+
+Personnalisation du logo avec vérification automatisée des droits d'auteur (IA).
+
+Fiche descriptive enrichie (balises SEO, géolocalisation précise, cartographie interactive).
+
+Gestion de catalogue intelligent
+
+Interface drag-and-drop pour un ajout/modification simplifié de produits.
+
+Recommandations dynamiques (prix ajustés en temps réel via analyse concurrentielle).
+
+Catégorisation automatique par algorithme de clustering et alertes pour stocks critiques.
+
+Suivi de commandes en temps réel
+
+Tableau de bord visuel avec statuts colorés, prévisions de délais basées sur l'historique.
+
+Génération de QR codes uniques pour traçabilité instantanée.
+
+Notifications multicanal (push, SMS, e-mail) pour nouvelles commandes et mises à jour.
+
+B. Espace Clients B2B
+
+Recherche avancée et intuitive
+
+Barre de recherche avec autocomplétion, filtres dynamiques (id-Fournisseurs, distance/temp de livraison approximative, prix, évaluations) et recherche vocale.
+
+Commande flexible
+
+Panier multi-fournisseurs avec simulation de coûts en temps réel (frais de livraison, taxes, remises).
+
+Option « commande groupée » ou « séparée », priorisant les fournisseurs locaux.
+
+Outils d'achat stratégique
+
+Demandes de devis automatisées (préremplissage via historique) et tableau comparatif fournisseurs.
+
+Historique des commandes avec export de factures (PDF/Excel signé numériquement) et intégration QuickBooks/SAP.
+
+Dashboard analytique pour suivre les dépenses et tendances d'achat.
+
+C. Espace Livreurs
+
+Gestion de livraison optimisée
+
+Tableau de bord géolocalisé avec calcul d'itinéraire intelligent (trafic en temps réel, mode hors ligne).
+
+Système anti-fraude et verrouillage de commande pour éviter les conflits.
+
+Preuve de livraison sécurisée
+
+Validation par scan de QR code, photo de signature électronique/biométrie  certifiée par IA .
+
+Notifications automatiques aux clients post-livraison.
+
+Communication unifiée
+
+Messagerie chiffrée avec traduction automatique et archivage des échanges.

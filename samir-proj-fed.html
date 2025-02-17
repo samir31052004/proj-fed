@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Plateforme de Commande en Gros - Documentation</title>
+    <style>
+      /* Styles de base */
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f7fa;
+        color: #2d3748;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .container {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+
+      h1 {
+        color: #2a4365;
+        border-bottom: 3px solid #4299e1;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: color 0.3s;
+      }
+
+      h2 {
+        color: #2b6cb0;
+        margin-top: 40px;
+        transition: color 0.3s;
+      }
+
+      h3 {
+        color: #4a5568;
+        margin: 30px 0 15px;
+        padding-left: 15px;
+        border-left: 4px solid #4299e1;
+        transition: color 0.3s;
+      }
+
+      .module {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border: 1px solid #e2e8f0;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+
+      .submodule {
+        margin-left: 20px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 6px;
+        margin: 15px 0;
+        transition: background-color 0.3s;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      li {
+        margin: 10px 0;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      li:before {
+        content: "•";
+        color: #4299e1;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .highlight {
+        color: #2b6cb0;
+        font-weight: 500;
+      }
+
+      .feature-badge {
+        background: #bee3f8;
+        color: #2b6cb0;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin-left: 10px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      /* Styles pour le mode sombre */
+      body.dark-mode {
+        background-color: #1a202c;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .container {
+        background: #2d3748;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      body.dark-mode h1 {
+        color: #63b3ed;
+      }
+
+      body.dark-mode h2 {
+        color: #4299e1;
+      }
+
+      body.dark-mode h3 {
+        color: #a0aec0;
+      }
+
+      body.dark-mode .module {
+        background: #4a5568;
+        border-color: #718096;
+      }
+
+      body.dark-mode .submodule {
+        background: #2d3748;
+      }
+
+      body.dark-mode .feature-badge {
+        background: #4299e1;
+        color: #bee3f8;
+      }
+
+      /* Switch pour le mode sombre */
+      .theme-switch {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .theme-switch label {
+        font-size: 14px;
+        color: #4a5568;
+        cursor: pointer;
+      }
+
+      .theme-switch input[type="checkbox"] {
+        appearance: none;
+        width: 40px;
+        height: 20px;
+        background: #cbd5e0;
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .theme-switch input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: white;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+      }
+
+      .theme-switch input[type="checkbox"]:checked {
+        background: #4299e1;
+      }
+
+      .theme-switch input[type="checkbox"]:checked::before {
+        transform: translateX(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Switch pour le mode sombre -->
+    <div class="theme-switch">
+      <label for="theme-toggle">Mode sombre</label>
+      <input type="checkbox" id="theme-toggle" />
+    </div>
+    <div class="container">
+      <h1>Projet : Plateforme Intelligente de Commande en Gros</h1>
+
+      <h2>Objectif Principal</h2>
+      <div class="module">
+        <p>
+          Développer une solution B2B unifiée connectant fournisseurs, clients
+          professionnels et livreurs via une interface ergonomique, en intégrant
+          des outils d'IA et d'analyse prédictive pour optimiser la gestion des
+          commandes, des stocks et des livraisons.
+        </p>
+      </div>
+
+      <h2>
+        Modules Clés &
+        <span class="feature-badge">Fonctionnalités Stratégiques</span>
+      </h2>
+
+      <div class="module">
+        <h3>A. Espace Fournisseurs</h3>
+        <div class="submodule">
+          <h4>Profil d'entreprise optimisé</h4>
+          <ul>
+            <li>
+              Personnalisation du logo avec vérification automatisée des droits
+              d'auteur <span class="feature-badge">IA</span>
+            </li>
+            <li>
+              Fiche descriptive enrichie (balises SEO, géolocalisation précise,
+              cartographie interactive)
+            </li>
+          </ul>
+        </div>
+
+        <div class="submodule">
+          <h4>Gestion de catalogue intelligent</h4>
+          <ul>
+            <li>
+              Interface drag-and-drop pour un ajout/modification simplifié de
+              produits
+            </li>
+            <li>
+              Recommandations dynamiques
+              <span class="feature-badge">Prix temps réel</span>
+            </li>
+            <li>Catégorisation automatique par algorithme de clustering</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section B: Espace Clients B2B -->
+      <div class="module">
+        <h3>B. Espace Clients B2B</h3>
+        <div class="submodule">
+          <h4>Recherche avancée et intuitive</h4>
+          <ul>
+            <li>
+              Barre de recherche avec autocomplétion, filtres dynamiques
+              (id-Fournisseurs, distance/temps de livraison approximative, prix,
+              évaluations) et recherche vocale
+            </li>
+          </ul>
+        </div>
+
+        <div class="submodule">
+          <h4>Commande flexible</h4>
+          <ul>
+            <li>
+              Panier multi-fournisseurs avec simulation de coûts en temps réel
+              (frais de livraison, taxes, remises)
+            </li>
+            <li>
+              Option « commande groupée » ou « séparée », priorisant les
+              fournisseurs locaux
+            </li>
+          </ul>
+        </div>
+
+        <div class="submodule">
+          <h4>Outils d'achat stratégique</h4>
+          <ul>
+            <li>
+              Demandes de devis automatisées (préremplissage via historique) et
+              tableau comparatif fournisseurs
+            </li>
+            <li>
+              Historique des commandes avec export de factures (PDF/Excel signé
+              numériquement) et intégration QuickBooks/SAP
+            </li>
+            <li>
+              Dashboard analytique pour suivre les dépenses et tendances d'achat
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section C: Espace Livreurs -->
+      <div class="module">
+        <h3>C. Espace Livreurs</h3>
+        <div class="submodule">
+          <h4>Gestion de livraison optimisée</h4>
+          <ul>
+            <li>
+              Tableau de bord géolocalisé avec calcul d'itinéraire intelligent
+              (trafic en temps réel, mode hors ligne)
+            </li>
+            <li>
+              Système anti-fraude et verrouillage de commande pour éviter les
+              conflits
+            </li>
+          </ul>
+        </div>
+
+        <div class="submodule">
+          <h4>Preuve de livraison sécurisée</h4>
+          <ul>
+            <li>
+              Validation par scan de QR code, photo de signature
+              électronique/biométrie certifiée par
+              <span class="feature-badge">IA</span>
+            </li>
+            <li>Notifications automatiques aux clients post-livraison</li>
+          </ul>
+        </div>
+
+        <div class="submodule">
+          <h4>Communication unifiée</h4>
+          <ul>
+            <li>
+              Messagerie chiffrée avec traduction automatique et archivage des
+              échanges
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <span>projet de samir benj</span>
+  </body>
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeLabel = document.querySelector(".theme-switch label");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      themeToggle.checked = true;
+      themeLabel.textContent = "Mode clair";
+    } else {
+      themeLabel.textContent = "Mode sombre"; // Mettre à jour le label si le mode clair est activé
+    }
+
+    themeToggle.addEventListener("change", () => {
+      body.classList.toggle("dark-mode");
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        themeLabel.textContent = "Mode clair"; // Changer le label en "Mode clair"
+      } else {
+        localStorage.setItem("theme", "light");
+        themeLabel.textContent = "Mode sombre"; // Changer le label en "Mode sombre"
+      }
+    });
+  </script>
+</html>
