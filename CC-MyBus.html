@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahier des Charges - Projet MyBus</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 0;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin: 40px 0;
+      padding: 25px;
+      border: 2px solid #eee;
+      border-radius: 10px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .feature-card {
+      padding: 20px;
+      background: #f9f9f9;
+      border-left: 4px solid var(--secondary-color);
+      margin: 10px 0;
+    }
+
+    .wireframe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .wireframe-box {
+      height: 200px;
+      background: #ecf0f1;
+      border: 2px dashed #bdc3c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 10px;
+    }
+
+    .badge {
+      background: #3498db;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <div class="header">
+    <h1>Cahier des Charges - Projet MyBus</h1>
+    <p>Moderniser la gestion des transports en commun avec une solution numérique intégrée.</p>
+  </div>
+
+  <!-- Section 1 : Introduction -->
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>
+      Le projet <strong>MyBus</strong> vise à moderniser la gestion des transports en commun en proposant une solution numérique intégrée. Cette application mobile et web permettra aux usagers de suivre en temps réel les trajets des bus, aux chauffeurs de communiquer efficacement avec le centre de contrôle, et aux administrateurs d’optimiser les opérations. Conçu pour répondre aux défis de l’urbanisation croissante, MyBus combine technologie et simplicité pour améliorer l’expérience des utilisateurs et la rentabilité des opérateurs.
+    </p>
+  </div>
+
+  <!-- Section 2 : Objectifs du Projet -->
+  <div class="section">
+    <h2>2. Objectifs du Projet</h2>
+    <p><strong>Objectif Principal :</strong> Développer une plateforme centralisée pour simplifier la gestion des transports publics et améliorer l’expérience utilisateur.</p>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Suivi GPS en temps réel</h3>
+        <p>Fournir un suivi précis des bus pour les usagers et les administrateurs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Communication efficace</h3>
+        <p>Faciliter la communication entre chauffeurs et administrateurs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Gestion automatisée</h3>
+        <p>Automatiser la planification des trajets et la gestion des incidents.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Tickets électroniques</h3>
+        <p>Permettre aux usagers d’acheter des tickets électroniques et de recevoir des alertes personnalisées.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sécurité des données</h3>
+        <p>Assurer la sécurité des données et la conformité aux normes en vigueur.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 : Acteurs du Projet -->
+  <div class="section">
+    <h2>3. Acteurs du Projet</h2>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Opérateur de Transport</h3>
+        <p>Responsable de la gestion globale et de la maintenance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Chauffeurs</h3>
+        <p>Utilisent l’interface dédiée pour suivre les trajets et signaler des incidents.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Usagers</h3>
+        <p>Passagers utilisant l’application pour consulter les horaires, acheter des tickets, et suivre les bus.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Administrateurs</h3>
+        <p>Supervisent les opérations, gèrent les chauffeurs, et analysent les données.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Équipe Technique</h3>
+        <p>Développeurs, designers, et testeurs en charge de la réalisation du projet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4 : Besoins Fonctionnels -->
+  <div class="section">
+    <h2>4. Besoins Fonctionnels</h2>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Interface Chauffeur</h3>
+        <ul>
+          <li>Tableau de bord avec trajet assigné et statut en temps réel.</li>
+          <li>Signalement d’incidents via formulaire.</li>
+          <li>Chat intégré avec l’admin.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>Interface Admin</h3>
+        <ul>
+          <li>CRUD des chauffeurs, véhicules, et trajets.</li>
+          <li>Planification dynamique des horaires.</li>
+          <li>Dashboard analytique.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>Interface Usager</h3>
+        <ul>
+          <li>Carte interactive avec suivi en temps réel.</li>
+          <li>Achat de tickets électroniques.</li>
+          <li>Fil d’actualités pour les annonces.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5 : Besoins Non Fonctionnels -->
+  <div class="section">
+    <h2>5. Besoins Non Fonctionnels</h2>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Performance</h3>
+        <ul>
+          <li>Latence maximale de 2 minutes pour les mises à jour GPS.</li>
+          <li>Load balancing pour gérer 5000 requêtes simultanées.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>Sécurité</h3>
+        <ul>
+          <li>Chiffrement des données utilisateurs.</li>
+          <li>Audit de sécurité semestriel.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>Compatibilité</h3>
+        <ul>
+          <li>Support Android et navigateurs modernes.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>Évolutivité</h3>
+        <ul>
+          <li>Architecture microservices pour ajouter des fonctionnalités.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6 : Technologies à Utiliser -->
+  <div class="section">
+    <h2>6. Technologies à Utiliser</h2>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Frontend</h3>
+        <p>Vue.js</p>
+      </div>
+      <div class="feature-card">
+        <h3>Backend</h3>
+        <p>Node.js + Vite</p>
+      </div>
+      <div class="feature-card">
+        <h3>Base de Données</h3>
+        <p>Supabase + stockage local</p>
+      </div>
+      <div class="feature-card">
+        <h3>Cartographie</h3>
+        <p>Google Maps API + Traffic Layer</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sécurité</h3>
+        <p>OAuth2.0, fingerprint, Face ID</p>
+      </div>
+      <div class="feature-card">
+        <h3>DevOps</h3>
+        <p>Docker, AWS</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 7 : Extensions Futures -->
+  <div class="section">
+    <h2>7. Extensions Futures (Idées)</h2>
+    <div class="grid">
+      <div class="feature-card">
+        <h3>Chatbot IA</h3>
+        <p>Assistance vocale pour répondre aux questions des usagers.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Feedback Utilisateurs</h3>
+        <p>Système de notation des trajets et des chauffeurs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>IoT</h3>
+        <p>Capteurs dans les bus pour surveiller l’état mécanique.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 8 : Maquettes (Wireframes) -->
+  <div class="section">
+    <h2>8. Maquettes (Wireframes)</h2>
+    <div class="wireframe-grid">
+      <div class="wireframe-box">Interface Chauffeur</div>
+      <div class="wireframe-box">Interface Admin</div>
+      <div class="wireframe-box">Interface Usager</div>
+    </div>
+  </div>
+</body>
+</html>
