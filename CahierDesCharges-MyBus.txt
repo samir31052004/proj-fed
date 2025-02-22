@@ -1,0 +1,133 @@
+Cahier des Charges - Projet MyBus
+1. Introduction
+Le projet MyBus vise à moderniser la gestion des transports en commun en proposant une solution numérique intégrée. Cette application mobile et web permettra aux usagers de suivre en temps réel les trajets des bus, aux chauffeurs de communiquer efficacement avec le centre de contrôle, et aux administrateurs d’optimiser les opérations. Conçu pour répondre aux défis de l’urbanisation croissante, MyBus combine technologie et simplicité pour améliorer l’expérience des utilisateurs et la rentabilité des opérateurs.
+
+2. Objectifs du Projet
+Objectif Principal :
+Développer une plateforme centralisée pour simplifier la gestion des transports publics et améliorer l’expérience utilisateur.
+
+Objectifs Spécifiques :
+
+Fournir un suivi GPS en temps réel des bus.
+
+Faciliter la communication entre chauffeurs et administrateurs.
+
+Automatiser la planification des trajets et la gestion des incidents.
+
+Permettre aux usagers d’acheter des tickets électroniques et de recevoir des alertes personnalisées.
+
+Assurer la sécurité des données et la conformité aux normes en vigueur.
+
+3. Acteurs du Projet
+Opérateur de Transport : Responsable de la gestion globale et de la maintenance.
+
+Chauffeurs : Utilisent l’interface dédiée pour suivre les trajets et signaler des incidents.
+
+Usagers : Passagers utilisant l’application pour consulter les horaires, acheter des tickets, et suivre les bus.
+
+Administrateurs : Supervisent les opérations, gèrent les chauffeurs, et analysent les données.
+
+Équipe Technique : Développeurs, designers, et testeurs en charge de la réalisation du projet.
+
+4. Besoins Fonctionnels
+A. Interfaces Utilisateurs
+Chauffeurs :
+
+Tableau de bord avec trajet assigné, statut en temps réel, et historique des trajets.
+
+Signalement d’incidents (panne, urgence) via formulaire + pièces jointes.
+
+Chat intégré avec l’admin et notifications (retards, changements d’horaire).
+
+Administrateurs :
+
+CRUD des chauffeurs, véhicules, et trajets.
+
+Planification dynamique des horaires et suivi des retards.
+
+Dashboard analytique (statistiques de fréquentation, rapports PDF/Excel).
+
+Usagers :
+
+Carte interactive avec suivi en temps réel et estimation d’arrivée.
+
+Achat de tickets électroniques (QR code) et alertes personnalisées.
+
+Fil d’actualités pour les annonces (retards, promotions).
+
+B. Fonctionnalités Transverses
+Authentification sécurisée pour les comptes admin/chauffeurs (OAuth2.0, fingerprint, Face ID).
+
+Intégration de paiement en ligne (Stripe, PayPal).
+
+Gestion des données conformément aux normes de sécurité (chiffrement des données).
+
+5. Besoins Non Fonctionnels
+Performance :
+
+Latence maximale de 2 minutes pour les mises à jour GPS.
+
+Load balancing pour gérer 5000 requêtes simultanées.
+
+Sécurité :
+
+Chiffrement des données utilisateurs (AES-256).
+
+Audit de sécurité semestriel.
+
+Compatibilité :
+
+Support Android et navigateurs modernes (Chrome, Safari, etc.).
+
+Évolutivité :
+
+Architecture microservices pour ajouter des fonctionnalités sans perturber le système.
+
+6. Technologies à Utiliser
+Frontend : Vue.js (framework JavaScript pour les interfaces utilisateurs).
+
+Backend : Node.js (API REST) + Vite (outil de build).
+
+Base de Données : Supabase (données structurées) + stockage local (cache).
+
+Cartographie : Google Maps API + Traffic Layer.
+
+Sécurité : OAuth2.0, fingerprint, Face ID.
+
+DevOps : Docker (conteneurisation), AWS (hébergement).
+
+7. Extensions Futures (Idées)
+Chatbot IA : Assistance vocale pour répondre aux questions des usagers.
+
+Feedback Utilisateurs : Système de notation des trajets et des chauffeurs.
+
+IoT : Capteurs dans les bus pour surveiller l’état mécanique et le confort (température).
+
+Version Web : Planificateur d’itinéraire accessible depuis un navigateur.
+
+8. Maquettes (Wireframes)
+Chauffeur :
+
+Écran principal : Carte GPS + boutons "Démarrer le trajet" / "Signaler un incident".
+
+Onglet "Historique" : Visualisation des trajets passés et retards.
+
+Admin :
+
+Dashboard : Graphiques de fréquentation, liste des incidents en cours.
+
+Formulaire de création d’annonce avec prévisualisation mobile.
+
+Usager :
+
+Page d’accueil : Barre de recherche de stations + carte interactive.
+
+Section "Mes Tickets" : Bibliothèque de QR codes scannables.
+
+Livrables Attendus :
+
+Application mobile (Android) + interface web admin.
+
+Documentation technique et manuels utilisateurs.
+
+Tests de performance et rapport de sécurité.
